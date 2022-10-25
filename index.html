@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nonfiction</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/66c9b6e88e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
 <div class="container">
@@ -24,41 +27,43 @@
                 </li>
             </ul>
         </div>
-        <div class="hamburger-menu">
-            <span></span>
+        <div>
+            <a href="" class="hamburger-menu"><span></span></a>
         </div>
     </header>
     <nav>
         <ul class="menu-list">
-            <li>about</li>
-            <li>shop
+            <li><a href="#">about</a></li>
+            <li><a href="#">shop</a>
                 <ul class="sub-menu">
-                    <li>Shop all</li>
-                    <li>perfume</li>
-                    <li>Body care</li>
-                    <li>Hand care</li>
-                    <li>Lip care</li>
-                    <li>Home object</li>
-                    <li>Gift set</li>
-                    <li>acc</li>
+                    <li><a href="#">Shop all</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Body care</a></li>
+                    <li><a href="#">Hand care</a></li>
+                    <li><a href="#">Lip care</a></li>
+                    <li><a href="#">Home object</a></li>
+                    <li><a href="#">Gift set</a></li>
+                    <li><a href="#">Acc</a></li>
                 </ul>
             </li>
-            <li>stores</li>
-            <li>Contact</li>
+            <li><a href="#">stores</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section class="main-img">img
+        <section class="main-img">
             <div class="full-logo"><img src="./image/s_image/full_logo.svg" alt="spin_logo"></div>
         </section>
         <section class="bestseller">
-            <div class="bestseller-img">2.2.1
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="bestseller-img">
+                <ul class="slide-container">
+                <li class="slide"><img src="./image/p_image/handcream.jpg" alt="hand cream"></li>
+                <li class="slide"><img src="./image/p_image/perfume.jpg" alt=""></li>
+                <li class="slide"><img src="./image/p_image/hand wash.jpg" alt="hand wash"></li>
+                <li class="slide"><img src="./image/p_image/hand lotion.jpg" alt="hand lotion"></li>
+                <li class="slide"><img src="./image/p_image/body wash.jpg" alt="body wash"></li>
+                <li class="slide"><img src="./image/p_image/body lotion.jpg" alt="body lotion"></li>
+                </ul>
                 <span class="pre">
                     <img src="./image/s_image/pre_icon.svg" alt="pre_icon"></span>
                 <span class="next">
@@ -69,7 +74,7 @@
                 <ul class="bestseller-list-list">
                     <li>
                         <div class="item-img">
-                            <img src="" alt="">
+                            <img src="./image/p_image/gentle night_handcream.jpg" alt="">
                         </div>
                         <div class="item">
                             <h3>gentle night</h3>
@@ -79,17 +84,17 @@
                     </li>
                     <li>
                         <div class="item-img">
-                            <img src="" alt="">
+                            <img src="./image/p_image/santal cream_perfume.jpeg" alt="">
                         </div>
                         <div class="item">
                             <h3>santal cream</h3>
-                            <p>prtable perfume</p>
+                            <p>portable perfume</p>
                             <button>shop</button>
                         </div>
                     </li>
                     <li>
                         <div class="item-img">
-                            <img src="" alt="">
+                            <img src="./image/p_image/for rest_hand wash.jpg" alt="">
                         </div>
                         <div class="item">
                             <h3>for rest</h3>
@@ -99,7 +104,7 @@
                     </li>
                     <li>
                         <div class="item-img">
-                            <img src="" alt="">
+                            <img src="./image/p_image/Gaiac flower_hand lotion.jpg" alt="">
                         </div>
                         <div class="item">
                             <h3>gaiac flower</h3>
@@ -109,7 +114,7 @@
                     </li>
                     <li>
                         <div class="item-img">
-                            <img src="" alt="">
+                            <img src="./image/p_image/for rest_body wash.jpg" alt="">
                         </div>
                         <div class="item">
                             <h3>for rest</h3>
@@ -119,7 +124,7 @@
                     </li>
                     <li>
                         <div class="item-img">
-                            <img src="" alt="">
+                            <img src="./image/p_image/For rest-body lotion.jpg" alt="">
                         </div>
                         <div class="item">
                             <h3>for rest</h3>
@@ -131,10 +136,16 @@
             </div>
         </section>
         <section class="instagram">
-            <div class="insta-img">2.3.1</div>
+            <div class="insta-img"></div>
             <div class="contents">
-                <div>Offical.Nonfiction</div>
-                2.3.2</div>
+                <div><a href="https://www.instagram.com/official.nonfiction/">Offical.Nonfiction</a></div>
+                <img src="./image/p_image/insta contents_img_1.jpg" alt="">
+                <img src="./image/p_image/insta contents_img_2.jpg" alt="">
+                <img src="./image/p_image/insta contents_img_3.jpg" alt="">
+                <img src="./image/p_image/insta contents_img_4.jpg" alt="">
+                <img src="./image/p_image/insta contents_img_5.jpg" alt="">
+                <img src="./image/p_image/insta contents_img_6.jpg" alt="">
+            </div>
         </section>
         <section class="contact">
             <div class="contact-form">
@@ -151,7 +162,7 @@
                 <button>문의 하기</button>
                 </form>
             </div>
-            <div class="contact-img"> 2.4.2</div>
+            <div class="contact-img"></div>
         </section>
     </main>
     <footer>
@@ -163,45 +174,48 @@
                     <li>13:30 - 17:30</li>
                     <li>토,일요일 및 공휴일 휴무</li>
                 </ul>
-                <div>이용약관 개인정보보호정책 사업자정보확인</div>
             </li>
             <li class="footer-box">
                 <h3>membership benefit</h3>
                 <ul>
-                    <li>공식 온라인 스토어 혜택</li>
-                    <li>무료 시향지 신청</li>
+                    <li><a href="#">공식 온라인 스토어 혜택</a></li>
+                    <li><a href="#">무료 시향지 신청</a></li>
                 </ul>
             </li>
             <li class="footer-box">
                 <h3>info</h3>
                 <ul>
-                    <li>공지사항</li>
-                    <li>채용</li>
-                    <li>자주묻는 질문</li>
-                    <li>배송 & 교환/반품</li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">자주묻는 질문</a></li>
+                    <li><a href="#">배송 & 교환/반품</a></li>
                 </ul>
             </li>
             <li class="footer-box">
                 <h3>contact us</h3>
                 <ul>
-                    <li>주문조회</li>
-                    <li>문의하기</li>
-                    <li>기업구매 문의</li>
-                    <li>고객 센터</li>
-                    <li>매장 안내</li>
+                    <li><a href="#">주문조회</a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">기업구매 문의</a></li>
+                    <li><a href="#">고객 센터</a></li>
+                    <li><a href="#">매장 안내</a></li>
                 </ul>
             </li>
             <li class="footer-box">
                 <h3>social</h3>
                 <ul>
-                    <li>Instagram</li>
-                    <li>Pinterest</li>
-                    <li>Kakao</li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li>
+                        <a href="#">Kakao</a>
+                    </li>
                 </ul>
             </li>
         </ul>
     </footer>
-    <div class="go-top">4.1</div>
+    <a href="#" class="go-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
 </div>
 </body>
 </html>
