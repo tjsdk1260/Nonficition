@@ -9,7 +9,7 @@ a{text-decoration: none;}
 }
 header{width: 100vw;
         position: fixed;
-        z-index: 20;
+        z-index: 2;
         left: 0; top: 0;}
 .logo{width: 100px;
     height:auto;
@@ -32,11 +32,13 @@ header{width: 100vw;
     background-color: transparent;    
     border-bottom: 1px solid;
     outline: none;
+    padding: 3px;
+    margin-top: 4px;
 }
 .hot-menu>ul li:nth-child(3)>form input[type="text"]::placeholder{
         color: #000;
         font-family: 'FGR';
-        font-size: 16px;}
+        font-size: 18px;}
 .hamburger-menu{width: 30px;
                 height: 16px;
                 position: absolute;
@@ -57,15 +59,32 @@ header{width: 100vw;
 .hamburger-menu span::after{top: 6px;}
 nav{
     position: fixed;
-    z-index:5;
+    z-index:1;
     top: 0;
     left: -300px;
     width: 300px;
     height: 100%;
-    background-color:#fff}
+    background-color:transparent;}
+#nav-bg{background: url(./image/s_image/header_background-img.svg);
+    position: absolute;
+    left: 0; top: -60px;
+    width: 4000px;
+    height: 4000px;
+    opacity: .5;
+    z-index: -200;}
+nav.open{
+    left:0;
+    transition: left .5s;
+}
+#nav-bg.open{
+    top: 0;
+    transition: top .5s;
+}
+.menu-list{position: relative;
+        z-index: 10;}
 .menu-list>li{font-size: 22px;
             font-family: 'FGR';
-                margin: 10px;}
+            margin: 10px;}
 .menu-list>li:first-child{margin-top: 120px;}
 .menu-list>li:nth-child(2):hover .sub-menu{
     display: block;}
@@ -180,7 +199,6 @@ section:nth-child(4){display: flex;}
     width: 40%;
     position: absolute; }
 .instagram>.contents>img:nth-of-type(1){
-    z-index: 8;
     top: 20%; right: 30%;
     animation:move-effect infinite 30s linear}
 .instagram>.contents>img:nth-of-type(2){
@@ -196,12 +214,10 @@ section:nth-child(4){display: flex;}
     animation:move-effect infinite 30s linear 5s
 }
 .instagram>.contents>img:nth-of-type(5){
-    z-index: 6;
     top: 30%; right: -15%;
     animation:move-effect infinite 30s linear
 }
 .instagram>.contents>img:nth-of-type(6){
-    z-index: 6;
     top: 45%; right: 17%;
     animation:move-effect infinite 30s linear
 }
@@ -215,6 +231,7 @@ section:nth-child(4){display: flex;}
     background-color: var(--color-beige);
     width: 50%;}
 .contact-form>div{
+    font-family: 'FGR';
     font-size: 40px;
     text-align: center;
     margin: 50px auto 20px;}
@@ -230,12 +247,10 @@ section:nth-child(4){display: flex;}
 }
 .contact .contact-form form select{
     height: 40px;
-}
-.contact .contact-form form select{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .contact .contact-form form button{
-    margin-top: 25px;
+    margin-top: 40px;
     outline: none;
     height: 40px;
     border-radius: 40px;
@@ -252,7 +267,7 @@ footer::before{content: "";
                 height: 200px;
                 margin-top: -200px;
                 background-color: var(--color-green);
-                z-index: -1;}
+                z-index: -10;}
 .footer-wrap{display: flex;
             height: 400px;
             background-color: var(--color-green);
@@ -267,8 +282,9 @@ footer::before{content: "";
                 font-size: 18px;}
 .footer-box ul>li{padding-bottom: 3px;}
 .footer-box ul>li>a{color: #fff;}
+.footer-box:last-child{font-family: 'FGR';}
 .go-top{
-    z-index: 20;
+    z-index: 10;
     width:40px;
     height: 40px;
     position: fixed;
@@ -280,6 +296,7 @@ footer::before{content: "";
     align-items: center;
     background-color: #fff;
     color: var(--color-green);
+}
 @font-face {
     font-family: 'FGR';
     src: url('/font/Figue_Regular.eot');

@@ -28,10 +28,11 @@
             </ul>
         </div>
         <div>
-            <a href="" class="hamburger-menu"><span></span></a>
+            <div class="hamburger-menu" onclick="openNav()"><span></span></a>
         </div>
     </header>
     <nav>
+        <div id="nav-bg"></div>
         <ul class="menu-list">
             <li><a href="#">about</a></li>
             <li><a href="#">shop</a>
@@ -50,7 +51,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <main>
+    <main onclick="closeNav()">
         <section class="main-img">
             <div class="full-logo"><img src="./image/s_image/full_logo.svg" alt="spin_logo"></div>
         </section>
@@ -64,9 +65,9 @@
                 <li class="slide"><img src="./image/p_image/body wash.jpg" alt="body wash"></li>
                 <li class="slide"><img src="./image/p_image/body lotion.jpg" alt="body lotion"></li>
                 </ul>
-                <span class="pre">
+                <span class="pre" onclick="prev()">
                     <img src="./image/s_image/pre_icon.svg" alt="pre_icon"></span>
-                <span class="next">
+                <span class="next" onclick="next()">
                     <img src="./image/s_image/next_icon.svg" alt="next_icon"></span>
             </div>
             <div class="bestseller-list">
