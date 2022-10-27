@@ -299,14 +299,12 @@ footer::before{content: "";
 .go-top{
     z-index: 10;
     width:40px;
-    height: 40px;
+    line-height: 40px;
     position: fixed;
     bottom: 20px;
     right: 20px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     text-align: center;
     background-color: #fff;
     color: var(--color-green);
     box-shadow: 0 0 10px 4px rgba(0,0,0,.2);
