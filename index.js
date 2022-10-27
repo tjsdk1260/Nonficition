@@ -10,6 +10,7 @@
 function openNav(){
     $('nav').toggleClass('open');
     $('#nav-bg').toggleClass('open');
+    $('.hamburger-menu').toggleClass('open');
 };
 
 let imgIdx = 0;
@@ -30,10 +31,10 @@ function next(){
     $('ul').css('left',-(100 * imgIdx)+'vh');
 };
 
-function closeNav(){
-    if($('nav').hasClass('open')){
-        $('nav').toggleClass('open');
-        $('#nav-bg').toggleClass('open');
-    }
+// function closeNav(){
+//     if($('nav').hasClass('open')){
+//         $('nav').toggleClass('open');
+//         $('#nav-bg').toggleClass('open');
+//     }
     
-};
+// };

@@ -9,7 +9,7 @@ a{text-decoration: none;}
 }
 header{width: 100vw;
         position: fixed;
-        z-index: 2;
+        z-index: 20;
         left: 0; top: 0;}
 .logo{width: 100px;
     height:auto;
@@ -27,6 +27,9 @@ header{width: 100vw;
     font-size: 18px;
     font-family: 'FGR';
     text-transform: uppercase;}
+.hot-menu li>a:hover{
+    text-decoration: underline;
+}
 .hot-menu>ul li:nth-child(3)>form input{
     border: none;
     background-color: transparent;    
@@ -59,7 +62,7 @@ header{width: 100vw;
 .hamburger-menu span::after{top: 6px;}
 nav{
     position: fixed;
-    z-index:1;
+    z-index:15;
     top: 0;
     left: -300px;
     width: 300px;
@@ -78,13 +81,20 @@ nav.open{
 }
 #nav-bg.open{
     top: 0;
+    opacity: 1;
     transition: top .5s;
 }
 .menu-list{position: relative;
-        z-index: 10;}
+        z-index: 10;
+        margin-left: 20px;
+        }
 .menu-list>li{font-size: 22px;
             font-family: 'FGR';
             margin: 10px;}
+.menu-list>li>a:hover,
+.sub-menu>li>a:hover{
+    text-decoration: underline;
+}
 .menu-list>li:first-child{margin-top: 120px;}
 .menu-list>li:nth-child(2):hover .sub-menu{
     display: block;}
@@ -141,6 +151,7 @@ section:nth-child(4){display: flex;}
     width: 50px;
     height: 50px;
     position: absolute;
+    z-index: 20;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -193,11 +204,13 @@ section:nth-child(4){display: flex;}
     background:url(./image/p_image/instagram_img.jpg) no-repeat center/cover}
 .instagram>.contents{
     position: relative;
+    z-index: -10;
     overflow: hidden;}
 .instagram>.contents>div>a{color: #000;}
 .instagram>.contents>img{
     width: 40%;
-    position: absolute; }
+    position: absolute;
+    z-index: -5;}
 .instagram>.contents>img:nth-of-type(1){
     top: 20%; right: 30%;
     animation:move-effect infinite 30s linear}
@@ -296,6 +309,8 @@ footer::before{content: "";
     align-items: center;
     background-color: #fff;
     color: var(--color-green);
+    box-shadow: 0 0 10px 4px rgba(0,0,0,.2);
+    cursor: pointer;
 }
 @font-face {
     font-family: 'FGR';
