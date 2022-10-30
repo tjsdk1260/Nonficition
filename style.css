@@ -16,7 +16,7 @@ header{width: 100vw;
     position: absolute;
     top: 20px;
     left: 20px;}
-.hot-menu{width: 325px;
+.hot-menu{width: 400px;
         height: auto;
         position: absolute;
         top: 20px;
@@ -60,6 +60,19 @@ header{width: 100vw;
                             height: 1px; background-color: #000;}
 .hamburger-menu span::before{top: -6px;}
 .hamburger-menu span::after{top: 6px;}
+.hamburger-menu.open span{
+    background-color: transparent;
+}
+.hamburger-menu.open span::before{
+    top: 0;
+    transform: rotate(45deg);
+    background-color: #000;
+}
+.hamburger-menu.open span::after{
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: #000;
+}
 nav{
     position: fixed;
     z-index:15;
@@ -68,24 +81,41 @@ nav{
     width: 300px;
     height: 100%;
     background-color:transparent;}
-#nav-bg{background: url(./image/s_image/header_background-img.svg);
-    position: absolute;
-    left: 0; top: -60px;
-    width: 4000px;
-    height: 4000px;
-    opacity: .5;
-    z-index: -200;}
 nav.open{
     left:0;
     transition: left .5s;
+    }
+#nav-bg-top{
+    position: absolute;
+    left: 659px;
+    top: -60px;
+    z-index: -200;
+    width: 3342px;
 }
-#nav-bg.open{
+#nav-bg-top.open{
     top: 0;
-    opacity: 1;
     transition: top .5s;
 }
+#nav-bg-round{
+    position: absolute;
+    left: 300px;
+    top: -60px;
+    z-index: -200;
+    width: 359px;;
+    height: 419.05px;
+    opacity: .5;}
+#nav-bg-round.open{
+    top: 0;
+    opacity: 1;
+    transition: top .5s, left .5s;
+}
+#nav-bg-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4000px;
+}
 .menu-list{position: relative;
-        z-index: 10;
         margin-left: 20px;
         }
 .menu-list>li{font-size: 22px;
@@ -168,7 +198,9 @@ section:nth-child(4){display: flex;}
                 font-size: 40px;
                 margin-top: 50px;
                 margin-left: 30px;}
-.bestseller-list{overflow-y: scroll;}
+.bestseller-list{
+    position: relative;
+    overflow-y: scroll;}
 .bestseller-list::-webkit-scrollbar{
         display: none;
 }
@@ -184,6 +216,9 @@ section:nth-child(4){display: flex;}
 .bestseller-list-list>li>.item-img>img{
     width: 100%;
     cursor: pointer;}
+.bestseller-list-list>li>.item-img>img:hover{
+    filter: blur(5px);
+}
 .bestseller-list-list>li .item{
     margin-top: 15px;
     text-align: center;
@@ -204,39 +239,48 @@ section:nth-child(4){display: flex;}
     background:url(./image/p_image/instagram_img.jpg) no-repeat center/cover}
 .instagram>.contents{
     position: relative;
-    z-index: -10;
     overflow: hidden;}
 .instagram>.contents>div>a{color: #000;}
 .instagram>.contents>img{
     width: 40%;
-    position: absolute;
-    z-index: -5;}
+    position: absolute;}
 .instagram>.contents>img:nth-of-type(1){
-    top: 20%; right: 30%;
-    animation:move-effect infinite 30s linear}
+    top: 20%; right: 38%;
+    z-index: 1;
+    animation:move-effect-1 60s linear infinite}
 .instagram>.contents>img:nth-of-type(2){
-    top: 10%; right: 3%;
-    animation:move-effect infinite 30s linear 6s
-    }
+    top: 15%; right: 3%;
+    animation:move-effect-2 60s linear 5s infinite}
 .instagram>.contents>img:nth-of-type(3){
     bottom: -10%; left: 60%;
-    animation:move-effect infinite 30s linear 3s
-}
+    animation:move-effect-3  60s linear 2s infinite}
 .instagram>.contents>img:nth-of-type(4){
     bottom: 10%; right: -50%;
-    animation:move-effect infinite 30s linear 5s
+    animation:move-effect-4 60s linear infinite
 }
 .instagram>.contents>img:nth-of-type(5){
     top: 30%; right: -15%;
-    animation:move-effect infinite 30s linear
-}
+    animation:move-effect-5 60s linear 1s infinite}
 .instagram>.contents>img:nth-of-type(6){
-    top: 45%; right: 17%;
-    animation:move-effect infinite 30s linear
+    top: 45%; left: -17%;
+    animation:move-effect-6 60s linear infinite}
+@keyframes move-effect-1{
+  50%{transform: translateX(-40vw);}
 }
-@keyframes move-effect{
-  from{transform: translateX(-50%);}
-  to{transform: translateX(-100%);}
+@keyframes move-effect-2{
+    50%{transform: translateX(-100vw);}
+  }
+@keyframes move-effect-3{
+    50%{transform: translateX(-100vw);}
+}
+@keyframes move-effect-4{
+    50%{transform: translateX(-100vw);}
+}
+@keyframes move-effect-5{
+    50%{transform: translateX(-100vw);}
+}
+@keyframes move-effect-6{
+    50%{transform: translateX(-20vw);}
 }
 .instagram .contents,
 .contact .contact-form{
@@ -247,6 +291,9 @@ section:nth-child(4){display: flex;}
     font-family: 'FGR';
     font-size: 40px;
     text-align: center;
+    border-bottom: 1px solid;
+    width: 50%;
+    padding-bottom: 3%;
     margin: 50px auto 20px;}
 .contact .contact-form form{
     width: 50%;
@@ -259,18 +306,22 @@ section:nth-child(4){display: flex;}
     transform: translate(-50%,-50%);
 }
 .contact .contact-form form select{
-    height: 40px;
+    cursor: pointer;
+    height: 45px;
     margin-bottom: 20px;
 }
 .contact .contact-form form button{
     margin-top: 40px;
     outline: none;
-    height: 40px;
-    border-radius: 40px;
+    height: 45px;
+    border-radius: 45px;
     border: none;
     background:var(--color-green);
     color: #fff;
     cursor: pointer;
+}
+.contact .contact-form form button:hover{
+    background-color: rgba(8,40,35,.8);
 }
 .contact-img{width: 50%;
     background:url(./image/p_image/contact\ us_img.jpg) no-repeat center/cover;
@@ -289,15 +340,20 @@ footer::before{content: "";
 .footer-box{flex: 1 1;
              width: 100px;
             height: 100%;}
+.footer-box>ul>.number{font-size: 20px;}
 .footer-box h3{text-transform: uppercase;
                 margin-bottom: 15px;
                 font-family: 'FGR';
-                font-size: 18px;}
-.footer-box ul>li{padding-bottom: 3px;}
+                font-size: 16px;}
+.footer-box ul>li{
+    font-size: 14px;
+    padding-bottom: 3px;}
 .footer-box ul>li>a{color: #fff;}
+.footer-box ul>li>a:hover{
+    text-decoration: underline;}
 .footer-box:last-child{font-family: 'FGR';}
 .go-top{
-    z-index: 10;
+    z-index: 30;
     width:40px;
     line-height: 40px;
     position: fixed;
