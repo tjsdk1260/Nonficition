@@ -152,9 +152,10 @@ main>.main-img>.full-logo>img{
 }
 .main-img{
        background:url(./image/p_image/main_image.jpg) no-repeat center/cover}
-section:nth-child(2),
 section:nth-child(3),
 section:nth-child(4){display: flex;}
+.bestseller {display: flex;
+           width: 100%;}
 .bestseller-img,
 .bestseller-list{width: 50%;}
 .insta-img,
@@ -214,6 +215,7 @@ section:nth-child(4){display: flex;}
     width: 40%;
     margin: 14px;}
 .bestseller-list-list>li>.item-img>img{
+    transition: all .5s;
     width: 100%;
     cursor: pointer;}
 .bestseller-list-list>li>.item-img>img:hover{
