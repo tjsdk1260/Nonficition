@@ -1,5 +1,6 @@
 *{margin: 0;
-    padding: 0;
+    padding: 0;}
+body{font-family: 'FGR';
     box-sizing: border-box;}
 li{list-style: none;}
 a{text-decoration: none;}
@@ -20,12 +21,11 @@ header{width: 100vw;
         height: auto;
         position: absolute;
         top: 20px;
-        right: 20px;}
+        right: 30px;}
 .hot-menu>ul{display: flex;}
 .hot-menu>ul li{flex: 1;}
 .hot-menu li>a{color: #000;
     font-size: 18px;
-    font-family: 'FGR';
     text-transform: uppercase;}
 .hot-menu li>a:hover{
     text-decoration: underline;
@@ -39,14 +39,15 @@ header{width: 100vw;
     margin-top: 4px;
 }
 .hot-menu>ul li:nth-child(3)>form input[type="text"]::placeholder{
-        color: #000;
         font-family: 'FGR';
+        color: #000;
         font-size: 18px;}
 .hamburger-menu{width: 30px;
                 height: 16px;
                 position: absolute;
                 top: 100px;
-                left: 20px;}
+                left: 20px;
+                cursor: pointer;}
 .hamburger-menu span{width: 100%;
                     height: 1px;
                     display: block;
@@ -103,7 +104,7 @@ nav.open{
     z-index: -200;
     width: 359px;;
     height: 419.05px;
-    opacity: .5;}
+    opacity: .6;}
 #nav-bg-round.open{
     top: 0;
     opacity: 1;
@@ -118,22 +119,24 @@ nav.open{
 .menu-list{position: relative;
         margin-left: 20px;
         }
-.menu-list>li{font-size: 22px;
-            font-family: 'FGR';
-            margin: 10px;}
+.menu-list>li{font-size: 24px;
+            margin: 10px;
+            transition: all .5s;}
 .menu-list>li>a:hover,
 .sub-menu>li>a:hover{
     text-decoration: underline;
 }
-.menu-list>li:first-child{margin-top: 120px;}
-.menu-list>li:nth-child(2):hover .sub-menu{
-    display: block;}
+.menu-list>li:first-child{margin-top: 150px;}
 .menu-list>li>a,
 .sub-menu>li>a{color: #000;}
-.sub-menu{display: none;
+.menu-list>li:nth-child(2) .sub-menu{
         padding-left: 20px;
-        font-size: 18px;}
+        font-size: 19px;}
 .sub-menu>li{margin-top: 10px;}
+.menu-list>li:last-child{
+    margin-top: 600px;
+}
+.menu-list>li>.language>a{color: #000;}
 section{width: 100%;
         height: 100vh;}
 main>.main-img>.full-logo{
@@ -170,7 +173,7 @@ section:nth-child(4){display: flex;}
     position: absolute;
     left: 0;
     top: 0;
-    width: 6000px;
+    width: 600vh;
     transition: left 0.5s ease-out;
 }
 .slide-container>.slide{
@@ -195,8 +198,7 @@ section:nth-child(4){display: flex;}
     right: 40px;
 }
 .bestseller-list>div,
-.contents>div{  font-family: "FGR";
-                font-size: 40px;
+.contents>div{  font-size: 40px;
                 margin-top: 50px;
                 margin-left: 30px;}
 .bestseller-list{
@@ -224,10 +226,10 @@ section:nth-child(4){display: flex;}
 .bestseller-list-list>li .item{
     margin-top: 15px;
     text-align: center;
-    font-family: 'FGR';
 }
 .bestseller-list-list>li .item>h3{
     text-transform: uppercase;
+    margin-bottom: 3px;
 }   
 .bestseller-list-list>li .item button{
     margin-top: 20px;
@@ -242,47 +244,56 @@ section:nth-child(4){display: flex;}
 .instagram>.contents{
     position: relative;
     overflow: hidden;}
-.instagram>.contents>div>a{color: #000;}
+.instagram>.contents>div>a{
+    color: #000;}
+.instagram>.contents>div>a:hover{
+    border-bottom: 2px solid;
+}
 .instagram>.contents>img{
     width: 40%;
     position: absolute;}
 .instagram>.contents>img:nth-of-type(1){
     top: 20%; right: 38%;
     z-index: 1;
-    animation:move-effect-1 60s linear infinite}
+    animation:move-effect-1 linear 40s infinite running}
 .instagram>.contents>img:nth-of-type(2){
     top: 15%; right: 3%;
-    animation:move-effect-2 60s linear 5s infinite}
+    animation:move-effect-2 40s linear 5s infinite running}
 .instagram>.contents>img:nth-of-type(3){
     bottom: -10%; left: 60%;
-    animation:move-effect-3  60s linear 2s infinite}
+    animation:move-effect-3 40s linear 2s infinite running}
 .instagram>.contents>img:nth-of-type(4){
     bottom: 10%; right: -50%;
-    animation:move-effect-4 60s linear infinite
-}
+    animation:move-effect-4 40s linear infinite running}
 .instagram>.contents>img:nth-of-type(5){
     top: 30%; right: -15%;
-    animation:move-effect-5 60s linear 1s infinite}
+    animation:move-effect-5 40s linear 1s infinite running}
 .instagram>.contents>img:nth-of-type(6){
     top: 45%; left: -17%;
-    animation:move-effect-6 60s linear infinite}
+    animation:move-effect-6 40s linear infinite running}
 @keyframes move-effect-1{
-  50%{transform: translateX(-40vw);}
+    0%{transform: translateX(0vw);}
+    100%{transform: translateX(-40vw);}
 }
 @keyframes move-effect-2{
-    50%{transform: translateX(-100vw);}
+    0%{transform: translateX(0vw);}
+    100%{transform: translateX(-40vw);}
   }
 @keyframes move-effect-3{
-    50%{transform: translateX(-100vw);}
+    0%{transform: translateX(0vw);}
+    100%{transform: translateX(-40vw);}
 }
 @keyframes move-effect-4{
-    50%{transform: translateX(-100vw);}
+    0%{transform: translateX(0vw);}
+    100%{transform: translateX(-40vw);}
 }
 @keyframes move-effect-5{
-    50%{transform: translateX(-100vw);}
+    0%{transform: translateX(0vw);}
+    100%{transform: translateX(-40vw);}
 }
 @keyframes move-effect-6{
-    50%{transform: translateX(-20vw);}
+    0%{transform: translateX(0vw);}
+    100%{transform: translateX(-40vw);}
 }
 .instagram .contents,
 .contact .contact-form{
@@ -290,7 +301,6 @@ section:nth-child(4){display: flex;}
     background-color: var(--color-beige);
     width: 50%;}
 .contact-form>div{
-    font-family: 'FGR';
     font-size: 40px;
     text-align: center;
     border-bottom: 1px solid;
@@ -311,12 +321,16 @@ section:nth-child(4){display: flex;}
     cursor: pointer;
     height: 45px;
     margin-bottom: 20px;
+    font-family: "FGR";
+}
+.contact .contact-form>textarea::placeholder{
+    font-family: "FGR";
 }
 .contact .contact-form form button{
     margin-top: 40px;
     outline: none;
-    height: 45px;
-    border-radius: 45px;
+    height: 50px;
+    border-radius: 50px;
     border: none;
     background:var(--color-green);
     color: #fff;
@@ -335,17 +349,18 @@ footer::before{content: "";
                 background-color: var(--color-green);
                 z-index: -10;}
 .footer-wrap{display: flex;
-            height: 400px;
+            height: auto;
             background-color: var(--color-green);
             color: #fff;
             padding: 50px;}
 .footer-box{flex: 1 1;
              width: 100px;
             height: 100%;}
+.footer-box:nth-child(1){flex: 2 1;}
 .footer-box>ul>.number{font-size: 20px;}
 .footer-box h3{text-transform: uppercase;
                 margin-bottom: 15px;
-                font-family: 'FGR';
+                font-weight: 500;
                 font-size: 16px;}
 .footer-box ul>li{
     font-size: 14px;
@@ -353,7 +368,6 @@ footer::before{content: "";
 .footer-box ul>li>a{color: #fff;}
 .footer-box ul>li>a:hover{
     text-decoration: underline;}
-.footer-box:last-child{font-family: 'FGR';}
 .go-top{
     z-index: 30;
     width:40px;
@@ -374,4 +388,38 @@ footer::before{content: "";
     src: local('☺'),url('./font/Figue_Regular.woff') format('woff'),url('/fonts/Figue_Regular.ttf') format('truetype'),url('/fonts/Figue_Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+@media screen and (max-width:960px) {
+    main>.main-img>.full-logo{width: 450px; height: 450px;}
+    .menu-list>li{font-size: 19px;}
+    .menu-list>li:nth-child(2) .sub-menu{font-size: 15px;}
+    .bestseller{flex-direction: column;}
+    .bestseller-img,
+    .bestseller-list{width: 100%;}
+    .bestseller-list{overflow-x: scroll;}
+    .bestseller-list-list{
+        flex-wrap: nowrap;
+    }
+    .bestseller-list>div,
+    .contents>div{font-size:30px;
+                margin-top: 50px;
+                margin-left: 30px;}
+    .contents>div{text-align: right;
+                margin-right: 20px;}
+    .insta-img{
+        width: auto;}
+    .instagram>.contents{width: 100%;}
+    .instagram>.contents>img{
+        width: 35%;}
+    .contact .contact-form{width: 100%;
+         background-color: #fff;}
+    .contact-img{width: 0;}
+    .contact-form>div{font-size:30px;}
+    footer::before{
+        display: none}
+    .footer-box h3{font-size: 14px;}
+    .footer-box ul>li{font-size: 12px;}
+    .go-top{
+        width:35px;
+        line-height: 35px;}
 }

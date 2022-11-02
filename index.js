@@ -3,6 +3,7 @@ function openNav(){
     $('.hamburger-menu').toggleClass('open');
     $('#nav-bg-top').toggleClass('open');
     $('#nav-bg-round').toggleClass('open');
+    $('.sub-menu').hide();
 };
 
 
@@ -53,20 +54,23 @@ function addImgDown(value) {
 
 
 $(window).scroll(function(){
-    const imgHeight = window.innerHeight;
-    const listHeight = $('.bestseller-list').height();
-    console.log(imgHeight, listHeight);
+    if(window.innerWidth >= 960){
+        const imgHeight = window.innerHeight;
+        const listHeight = $('.bestseller-list').height();
+        console.log(imgHeight, listHeight);
 
-    let scrolls = $(this).scrollTop();
-    if(imgHeight <= scrolls && scrolls <= listHeight){
-        giveFix();
-    }else if(listHeight <= scrolls && scrolls <= imgHeight+listHeight) {
-        removeFix();
-        addImgDown(listHeight - imgHeight);
+        let scrolls = $(this).scrollTop();
+        if(imgHeight <= scrolls && scrolls <= listHeight){
+            giveFix();
+        }else if(listHeight <= scrolls && scrolls <= imgHeight+listHeight) {
+            removeFix();
+            addImgDown(listHeight - imgHeight);
+        }
+        else{
+            removeFix();
+        }   
     }
-    else{
-        removeFix();
-    }
+    
 });
 
 window.onscroll=()=>{
@@ -85,4 +89,10 @@ goTop.addEventListener('click',function(){
     });
 });
 
+$('.shop').on('mouseover',function(){
+    $('.sub-menu').stop().slideDown();
+})
 
+$('.shop').on('mouseout',function(){
+    $('.sub-menu').stop().slideUp();
+})
