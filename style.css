@@ -129,12 +129,10 @@ nav.open{
 .menu-list>li:first-child{margin-top: 150px;}
 .menu-list>li>a,
 .sub-menu>li>a{color: #000;}
-.menu-list>li:nth-child(2) .sub-menu{
-        padding-left: 20px;
-        font-size: 19px;}
 .sub-menu>li{margin-top: 10px;}
 .menu-list>li:last-child{
     margin-top: 600px;}
+.menu-list>li>.language{font-size: 18px;}
 .menu-list>li>.language>a{color: #000;}
 section{width: 100%;
         height: 100vh;}
@@ -158,7 +156,7 @@ section:nth-child(3),
 section:nth-child(4){display: flex;}
 .bestseller {display: flex;
            width: 100%;}
-.bestseller-img,
+.bestseller-img{width: 50%;}
 .bestseller-list{width: 50%;}
 .insta-img,
 .contact-form{width: 50%;
@@ -172,7 +170,7 @@ section:nth-child(4){display: flex;}
     position: absolute;
     left: 0;
     top: 0;
-    width: 600vw;
+    width: 6000px;
     transition: left 0.5s ease-out;
 }
 .slide-container>.slide{
@@ -204,7 +202,7 @@ section:nth-child(4){display: flex;}
     position: relative;
     overflow-y: scroll;}
 .bestseller-list::-webkit-scrollbar{
-        display: none;
+    width: 0;
 }
 .bestseller-list-list{
     display: flex;
@@ -389,6 +387,7 @@ footer::before{content: "";
     font-style: normal;
 }
 @media screen and (max-width:960px) {
+    body{overflow-x:hidden;}
     main>.main-img>.full-logo{width: 400px; height: 400px;}
     .hot-menu{width: 300px;}
     .hot-menu>ul li:nth-child(3)>form input{
@@ -402,24 +401,39 @@ footer::before{content: "";
     .bestseller{flex-direction: column;}
     .bestseller-img{width: 100%;}
     .bestseller-list{
+        width: 100%;
+        height: 430px;
+        overflow-y: hidden;}
+    /* .bestseller-list::-webkit-scrollbar{
+       width: auto;
+       height: 20px;
+    } */
+    .bestseller-list-list{
+        /* display: flex;
+        flex-wrap: nowrap; */
+        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(6, 174px);
+        padding: 0;
+        width: 100%;
+        height: 300px;
         overflow-x: scroll;
         overflow-y: hidden;
-        height: auto;}
-    .bestseller-list-list{
-        flex-wrap: nowrap;
-        padding: 0;
-        height: auto;
     }
     .bestseller-list-list>li{
-        border: 1px solid red;
-        margin-left: 10px;}
+        margin-left: 10px;
+        width: 150px;}
     .bestseller-list-list>li .item>h3{
         font-size: 15px;
+    }
+    .bestseller-list-list>li>.item-img{
+        width: 100%;
     }
     .bestseller-list>div,
     .contents>div{font-size:30px;
                 margin-top: 50px;
                 margin-left: 30px;}
+    .bestseller-list>div{margin-bottom: 40px;}
     .contents>div{text-align: right;
                 margin-right: 20px;}
     .insta-img{
