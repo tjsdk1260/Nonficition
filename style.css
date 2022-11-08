@@ -124,7 +124,7 @@ nav.open{
 .menu-list{position: relative;
         margin-left: 20px;
         }
-.menu-list>li{font-size: 24px;
+.menu-list>li{font-size: 22px;
             margin: 10px;
             transition: all .5s;}
 .menu-list>li>a:hover,
@@ -146,8 +146,8 @@ main>.main-img>.full-logo{
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
 }
 main>.main-img>.full-logo>img{
     animation: spin 40s linear infinite;
@@ -196,10 +196,10 @@ section:nth-child(4){display: flex;}
     transition: all .3s ease-in;
 }
 .bestseller-img .pre>img{
-    left: 40px;
+    left: 10px;
 }
 .bestseller-img .next>img{
-    right: 40px;
+    right: 10px;
 }
 .bestseller-list>div,
 .contents>div{  font-size: 40px;
@@ -400,8 +400,6 @@ footer::before{content: "";
 }
 @media screen and (max-width:960px) {
     body{overflow-x:hidden;}
-    header{background-color: #fff;
-        height: 120px;}
     main>.main-img>.full-logo{width: 335px; height: 335px;}
     .logo{position: static;
         margin: 20px auto;}
@@ -418,7 +416,7 @@ footer::before{content: "";
     .hot-menu li>a,.hot-menu>ul li:nth-child(3)>form input[type="text"]::placeholder{
         font-size: 16px;
     }
-    .hamburger-menu{top: 30px;}
+    .hamburger-menu{top: 33px;}
     nav{left: -100%;
         width: 100%;
         background-color: #fff;}
@@ -427,6 +425,8 @@ footer::before{content: "";
     #nav-bg-side{display: none;}
     .menu-list>li{font-size: 19px;}
     .menu-list>li:nth-child(2) .sub-menu{font-size: 15px;}
+    .main-img{
+        background:url(./image/p_image/main_image_mobile.jpg) no-repeat center/cover}
     .bestseller{flex-direction: column;}
     .bestseller-img{width: 100%;}
     .bestseller-list{
