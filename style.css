@@ -34,6 +34,7 @@ header{width: 100vw;
     text-decoration: underline;
 }
 .hot-menu>ul li:nth-child(3)>form input{
+    appearance: none;
     border-radius:0;
     border: none;
     background-color: transparent;    
@@ -243,8 +244,8 @@ section:nth-child(4){display: flex;}
     outline: none;
     font-size: 15px;
     background: #fff;
-    color: 000;
-    border: 1px solid ;}
+    color: #000;
+    border: 1px solid#000 ;}
 .insta-img{
     background:url(./image/p_image/instagram_img.jpg) no-repeat center/cover}
 .instagram>.contents{
@@ -327,9 +328,11 @@ section:nth-child(4){display: flex;}
     cursor: pointer;
     height: 45px;
     margin-bottom: 20px;
+    color: #000;
     font-family: "FGR";
 }
 .contact .contact-form>textarea::placeholder{
+    color: #000;
     font-family: "FGR";
 }
 .contact .contact-form form button{
@@ -403,7 +406,12 @@ footer::before{content: "";
     .hamburger-menu{top: 30px;}
     .hot-menu{width: 300px;
             top: 100px;}
+    .hot-menu>ul li:nth-child(1),
+    .hot-menu>ul li:nth-child(2){
+       visibility: hidden;
+    }
     .hot-menu>ul li:nth-child(3)>form input{
+        appearance: none;
         margin-top: 2px;
     }
     .hot-menu li>a,.hot-menu>ul li:nth-child(3)>form input[type="text"]::placeholder{
