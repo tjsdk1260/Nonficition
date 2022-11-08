@@ -1,9 +1,11 @@
 *{margin: 0;
     padding: 0;}
 body{font-family: 'FGR';
-    box-sizing: border-box;}
+    box-sizing: border-box;
+    overflow-x: hidden;}
 li{list-style: none;}
 a{text-decoration: none;}
+button{-webkit-appearance: none;}
 :root{
     --color-green:#082823;
     --color-beige:#efecdf;
@@ -31,6 +33,7 @@ header{width: 100vw;
     text-decoration: underline;
 }
 .hot-menu>ul li:nth-child(3)>form input{
+    border-radius: 0;
     border: none;
     background-color: transparent;    
     border-bottom: 1px solid;
@@ -388,8 +391,12 @@ footer::before{content: "";
 }
 @media screen and (max-width:960px) {
     body{overflow-x:hidden;}
-    main>.main-img>.full-logo{width: 400px; height: 400px;}
-    .hot-menu{width: 300px;}
+    main>.main-img>.full-logo{width: 350px; height: 350px;}
+    .logo{position: static;
+        margin: 20px  auto;}
+    .hamburger-menu{top: 20px;}
+    .hot-menu{width: 300px;
+            top: 100px;}
     .hot-menu>ul li:nth-child(3)>form input{
         margin-top: 2px;
     }
@@ -409,8 +416,6 @@ footer::before{content: "";
        height: 20px;
     } */
     .bestseller-list-list{
-        /* display: flex;
-        flex-wrap: nowrap; */
         justify-content: flex-start;
         display: grid;
         grid-template-columns: repeat(6, 174px);
@@ -439,18 +444,16 @@ footer::before{content: "";
     .insta-img{
         width: auto;}
     .instagram>.contents{width: 100%;}
-    .instagram>.contents>img{
-        width: 35%;}
     .contact .contact-form{width: 100%;
          background-color: #fff;}
     .contact-img{width: 0;}
     .contact-form>div{font-size:30px;}
     footer::before{
         display: none}
+    .footer-wrap{flex-direction: column;}
+    .footer-box{margin-bottom:40px;}
     .footer-box>ul>.number{font-size: 18px;}
     .footer-box h3{font-size: 14px;}
     .footer-box ul>li{font-size: 11px;}
-    .go-top{
-        width:35px;
-        line-height: 35px;}
+    .footer-box:last-child{margin-bottom: 0;}
 }
