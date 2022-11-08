@@ -401,12 +401,12 @@ footer::before{content: "";
 @media screen and (max-width:960px) {
     body{overflow-x:hidden;}
     header{background-color: #fff;
-        height: 135px;}
+        height: 120px;}
     main>.main-img>.full-logo{width: 335px; height: 335px;}
     .logo{position: static;
         margin: 20px auto;}
     .hot-menu{width: 300px;
-            top: 30px;}
+            top: 80px;}
     .hot-menu>ul li:nth-child(1),
     .hot-menu>ul li:nth-child(2){
        visibility: hidden;
