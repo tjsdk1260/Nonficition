@@ -400,23 +400,31 @@ footer::before{content: "";
 }
 @media screen and (max-width:960px) {
     body{overflow-x:hidden;}
+    header{background-color: #fff;
+        height: 135px;}
     main>.main-img>.full-logo{width: 335px; height: 335px;}
     .logo{position: static;
         margin: 20px auto;}
-    .hamburger-menu{top: 30px;}
     .hot-menu{width: 300px;
-            top: 100px;}
+            top: 30px;}
     .hot-menu>ul li:nth-child(1),
     .hot-menu>ul li:nth-child(2){
        visibility: hidden;
     }
     .hot-menu>ul li:nth-child(3)>form input{
-        appearance: none;
+        width: 135px;
         margin-top: 2px;
     }
     .hot-menu li>a,.hot-menu>ul li:nth-child(3)>form input[type="text"]::placeholder{
         font-size: 16px;
     }
+    .hamburger-menu{top: 30px;}
+    nav{left: -100%;
+        width: 100%;
+        background-color: #fff;}
+    #nav-bg-top{display: none;}
+    #nav-bg-round{display: none;}
+    #nav-bg-side{display: none;}
     .menu-list>li{font-size: 19px;}
     .menu-list>li:nth-child(2) .sub-menu{font-size: 15px;}
     .bestseller{flex-direction: column;}
