@@ -332,6 +332,7 @@ section:nth-child(4){display: flex;}
     color: #000;
     font-family: 'Noto Sans KR', sans-serif;
 }
+.contact .contact-form textarea{resize: none;}
 .contact .contact-form textarea::-webkit-input-placeholder{
     color: #000;
     font-family: 'Noto Sans KR', sans-serif;
