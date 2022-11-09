@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 *{margin: 0;
     padding: 0;}
 body{font-family: 'FGR';
@@ -127,6 +128,7 @@ nav.open{
 .menu-list>li{font-size: 22px;
             margin: 10px;
             transition: all .5s;}
+.menu-list>li:nth-child(2) .sub-menu{font-size: 18px;}
 .menu-list>li>a:hover,
 .sub-menu>li>a:hover{
     text-decoration: underline;
@@ -182,7 +184,6 @@ section:nth-child(4){display: flex;}
 .slide-container>.slide{
     float: left;}
 .slide>img{width: 100%;
-        max-width: 1000px;
         height: 100vh;}
 .bestseller-img .pre>img,
 .bestseller-img .next>img{
@@ -329,11 +330,11 @@ section:nth-child(4){display: flex;}
     height: 45px;
     margin-bottom: 20px;
     color: #000;
-    font-family: "FGR";
+    font-family: 'Noto Sans KR', sans-serif;
 }
-.contact .contact-form>textarea::placeholder{
+.contact .contact-form textarea::-webkit-input-placeholder{
     color: #000;
-    font-family: "FGR";
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .contact .contact-form form button{
     margin-top: 40px;
@@ -344,6 +345,8 @@ section:nth-child(4){display: flex;}
     background:var(--color-green);
     color: #fff;
     cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    
 }
 .contact .contact-form form button:hover{
     background-color: rgba(8,40,35,.8);
@@ -377,6 +380,12 @@ footer::before{content: "";
 .footer-box ul>li>a{color: #fff;}
 .footer-box ul>li>a:hover{
     text-decoration: underline;}
+.footer-box:first-child>ul>li:nth-child(3),
+.footer-box:nth-child(2)>ul>li,
+.footer-box:nth-child(3)>ul>li,
+.footer-box:nth-child(4)>ul>li{
+    font-family: 'Noto Sans KR', sans-serif;
+}
 .go-top{
     z-index: 30;
     width:40px;
@@ -466,6 +475,8 @@ footer::before{content: "";
     .insta-img{
         width: auto;}
     .instagram>.contents{width: 100%;}
+    .instagram>.contents>img{
+        width: 46%;}
     .contact .contact-form{width: 100%;
          background-color: #fff;}
     .contact-img{width: 0;}
