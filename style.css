@@ -367,7 +367,7 @@ footer::before{content: "";
             color: #fff;
             padding: 50px;}
 .footer-box{flex: 1 1;
-             width: 100px;
+             width: auto;
             height: 100%;}
 .footer-box:nth-child(1){flex: 2 1;}
 .footer-box>ul>.number{font-size: 20px;}
