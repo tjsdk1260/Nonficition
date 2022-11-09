@@ -403,8 +403,8 @@ footer::before{content: "";
     main>.main-img>.full-logo{width: 335px; height: 335px;}
     .logo{position: static;
         margin: 20px auto;}
-    .hot-menu{width: 300px;
-            top: 80px;}
+    .hot-menu{width: 200px;
+            top: 33px;}
     .hot-menu>ul li:nth-child(1),
     .hot-menu>ul li:nth-child(2){
        visibility: hidden;
