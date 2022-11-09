@@ -412,7 +412,7 @@ footer::before{content: "";
     main>.main-img>.full-logo{width: 335px; height: 335px;}
     .logo{position: static;
         margin: 20px auto;}
-    .hot-menu{width: 200px;
+    .hot-menu{width: 195px;
             top: 33px;}
     .hot-menu>ul li:nth-child(1),
     .hot-menu>ul li:nth-child(2){
@@ -442,10 +442,6 @@ footer::before{content: "";
         width: 100%;
         height: 430px;
         overflow-y: hidden;}
-    /* .bestseller-list::-webkit-scrollbar{
-       width: auto;
-       height: 20px;
-    } */
     .bestseller-list-list{
         justify-content: flex-start;
         display: grid;

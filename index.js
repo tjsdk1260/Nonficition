@@ -13,8 +13,11 @@ function prev(){
     }else{
         imgIdx -= 1;
     }
-    if(window.innerHeight*2<=window.innerWidth ){
+    if(window.innerWidth>=960 && window.innerHeight*2<=window.innerWidth){
         $('.bestseller-img ul').css('left',-(50 * imgIdx)+'vw');
+    }
+    else if (window.innerWidth < 960 && window.innerHeight<=window.innerWidth) {
+        $('.bestseller-img ul').css('left',-(100 * imgIdx)+'vw');
     }
     else {
         $('.bestseller-img ul').css('left',-(100 * imgIdx)+'vh');
@@ -26,8 +29,11 @@ function next(){
     }else{
         imgIdx += 1;
     }
-    if(window.innerHeight*2<=window.innerWidth ){
+    if(window.innerWidth>=960 && window.innerHeight*2<=window.innerWidth){
         $('.bestseller-img ul').css('left',-(50 * imgIdx)+'vw');
+    }
+    else if (window.innerWidth < 960 && window.innerHeight<=window.innerWidth) {
+        $('.bestseller-img ul').css('left',-(100 * imgIdx)+'vw');
     }
     else {
         $('.bestseller-img ul').css('left',-(100 * imgIdx)+'vh');
@@ -36,11 +42,18 @@ function next(){
 
 $(window).resize(function(){
     console.log(window.innerHeight,window.innerWidth);
-    if(window.innerHeight*2<=window.innerWidth ){
+    if(window.innerWidth>=960 && window.innerHeight*2<=window.innerWidth){
         $('.bestseller-img ul').css('left',-(50 * imgIdx)+'vw');
         $('.bestseller-img ul img').css({
             width: '50vw',
             height: '50vw'
+        });
+    }
+    else if(window.innerWidth < 960 && window.innerHeight<=window.innerWidth) {
+        $('.bestseller-img ul').css('left',-(100 * imgIdx)+'vw');
+        $('.bestseller-img ul img').css({
+            width: '100vw',
+            height: '100vw'
         });
     }
     else {
